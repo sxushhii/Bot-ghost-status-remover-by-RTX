@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["sushis"];
+const statusMessages = ["create tix 2 order", "happy shopping!"];
 
 
 let currentIndex = 0;
@@ -73,8 +73,8 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-activities: [{ name: currentStatus, type: ActivityType.Streaming, url: "https://twitch.tv/sxush1" }],
-    status: 'Streaming',
+activities: [{ name: currentStatus, type: ActivityType.Idle }],
+    status: 'Idle',
   });
 
   
